@@ -5,6 +5,9 @@ metadata:
     service: backend-feed
   name: backend-feed
 spec:
+  selector:
+    matchLabels:
+      service: backend-feed
   replicas: 3
   template:
     metadata:
@@ -72,7 +75,7 @@ spec:
         - name: aws-secret
           mountPath: "/root/.aws/"
           readOnly: true        
-      restartPolicy: Never
+      restartPolicy: Always
       volumes:
       - name: aws-secret
         secret:
