@@ -16,7 +16,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: satyar2003/udagram-frontend:v1
+      - image: satyar2003/udagram-frontend:v7
         name: frontend
         imagePullPolicy: Always          
         ports:
@@ -26,6 +26,6 @@ spec:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
+            memory: "10G"
             cpu: "500m"                
       restartPolicy: Always
